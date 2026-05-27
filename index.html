@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOOM 67 — Descend Into Hell</title>
+  <meta name="description" content="DOOM 67 — A retro first-person shooter where 4 brave souls are sent to hell's corners to bring back order. Download now and face the rebellion.">
+  <meta name="keywords" content="DOOM 67, FPS, retro shooter, Wolfenstein, raycasting, hell, demons, download">
+  <meta name="author" content="Timothée Kremer, Simon Lallement, Antoine Rayot">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DOOM 67 — Descend Into Hell">
+  <meta property="og:description" content="The rebellion has begun. Hell needs order. Are you brave enough to answer the call?">
+  <meta property="og:image" content="img/screenshot_1.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://doom67.kolbxyz.xyz">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!-- ========== AMBIENT PARTICLES ========== -->
+  <div class="particles-container" id="particles"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="nav">
+    <span class="nav__brand">DOOM 67</span>
+    <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#story" class="nav__link">Story</a></li>
+      <li><a href="#features" class="nav__link">Features</a></li>
+      <li><a href="#arsenal" class="nav__link">Arsenal</a></li>
+      <li><a href="#screenshots" class="nav__link">Screenshots</a></li>
+      <li><a href="#download" class="nav__link">Download</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <img src="img/logo.png" alt="DOOM Logo" class="hero__logo" id="hero-logo">
+      <div class="hero__number">67</div>
+      <p class="hero__subtitle">A Raycasting FPS Experience</p>
+      <h1 class="hero__tagline">The rebellion has begun.<br>Hell needs <em>order</em>.</h1>
+      <a href="#download" class="hero__cta" id="hero-cta">
+        Download Now
+      </a>
+    </div>
+    <div class="hero__scroll" id="hero-scroll">&#9660;</div>
+  </header>
+
+  <!-- ========== STORY ========== -->
+  <div class="pentagram-divider">&#10022; &#10022; &#10022;</div>
+  <section class="section" id="story">
+    <h2 class="section__title fade-in">The Story</h2>
+    <hr class="section__divider fade-in">
+    <div class="about__grid fade-in">
+      <div class="about__text">
+        <p>It all started with some rebels who claimed to be worthy of heaven. They pretended that hell was too harsh of a solution for their sins. What once ruled by clear leadership and boundaries quickly became a land of chaos and protestation.</p>
+        <p>That's why the Goddess of Hell, with the permission of the almighty ruler of the world, <strong>ra9</strong>, decided to send <em>4 brave souls</em> at hell's 4 corners to bring back order, justice, and suppress every rebel you may find on your way.</p>
+        <p>Your mission is clear: <strong>bring back order</strong>. Achieve your mission, no matter what. Those who dare to block you from achieving your goal shall be banished from life.</p>
+      </div>
+      <div class="about__image">
+        <img src="img/screenshot_1.png" alt="DOOM 67 Gameplay" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES ========== -->
+  <div class="pentagram-divider">&#10022; &#10022; &#10022;</div>
+  <section class="section features" id="features">
+    <h2 class="section__title fade-in">Features</h2>
+    <hr class="section__divider fade-in">
+    <div class="features__grid">
+      <div class="feature-card fade-in" id="feature-performance">
+        <h3 class="feature-card__title">Unlimited FPS</h3>
+        <p class="feature-card__desc">No framerate cap. While AAA games ship locked at 60 FPS for full price, DOOM 67 runs as fast as your hardware allows. Pure, unthrottled performance.</p>
+      </div>
+      <div class="feature-card fade-in" id="feature-fluidity">
+        <h3 class="feature-card__title">Fluid Movement</h3>
+        <p class="feature-card__desc">Wall-sliding, extremely low input latency, and full controller support. Movement that feels immediate and responsive — the way it should be.</p>
+      </div>
+      <div class="feature-card fade-in" id="feature-scale">
+        <h3 class="feature-card__title">Colossal Scale</h3>
+        <p class="feature-card__desc">Maps up to 255&times;255 tiles — that's up to 65,025 traversable cells. Dungeons, labyrinths, spirals, arenas and mazes await.</p>
+      </div>
+      <div class="feature-card fade-in" id="feature-security">
+        <h3 class="feature-card__title">Data Security</h3>
+        <p class="feature-card__desc">Advanced checksum system protects against data corruption and save tampering. Storage optimized to be 3.8&times; lighter than raw format.</p>
+      </div>
+      <div class="feature-card fade-in" id="feature-custom-maps">
+        <h3 class="feature-card__title">Load Your Own Maps</h3>
+        <p class="feature-card__desc">Total freedom — load custom maps with a documented save format. The save system is designed for easy extensibility.</p>
+      </div>
+      <div class="feature-card fade-in" id="feature-controls">
+        <h3 class="feature-card__title">Keyboard & Controller</h3>
+        <p class="feature-card__desc">Full keyboard & mouse support with ZQSD layout, plus native DualShock 4 controller support. Play your way.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS BAR ========== -->
+  <section class="stats" id="stats">
+    <div class="stats__grid fade-in">
+      <div>
+        <div class="stat__value">&#8734;</div>
+        <div class="stat__label">FPS</div>
+      </div>
+      <div>
+        <div class="stat__value">65K</div>
+        <div class="stat__label">Max Tiles</div>
+      </div>
+      <div>
+        <div class="stat__value">3.8&times;</div>
+        <div class="stat__label">Save Compression</div>
+      </div>
+      <div>
+        <div class="stat__value">110KB</div>
+        <div class="stat__label">Binary Size</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ARSENAL ========== -->
+  <div class="pentagram-divider">&#10022; &#10022; &#10022;</div>
+  <section class="section" id="arsenal">
+    <h2 class="section__title fade-in">The Arsenal</h2>
+    <hr class="section__divider fade-in">
+    <div class="arsenal__grid fade-in">
+      <div class="arsenal__item">
+        <img src="img/weapon_fist.png" alt="Fist" class="arsenal__sprite">
+        <div class="arsenal__name">Fist</div>
+        <div class="arsenal__desc">Primitive melee force</div>
+      </div>
+      <div class="arsenal__item">
+        <img src="img/weapon_pistol.png" alt="Pistol" class="arsenal__sprite">
+        <div class="arsenal__name">Pistol</div>
+        <div class="arsenal__desc">Standard precision</div>
+      </div>
+      <div class="arsenal__item">
+        <img src="img/weapon_shotgun.png" alt="Shotgun" class="arsenal__sprite">
+        <div class="arsenal__name">Shotgun</div>
+        <div class="arsenal__desc">Close-range power</div>
+      </div>
+      <div class="arsenal__item">
+        <img src="img/weapon_saw.png" alt="Chainsaw" class="arsenal__sprite">
+        <div class="arsenal__name">Chainsaw</div>
+        <div class="arsenal__desc">Devastating melee</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SCREENSHOTS ========== -->
+  <div class="pentagram-divider">&#10022; &#10022; &#10022;</div>
+  <section class="section" id="screenshots">
+    <h2 class="section__title fade-in">Screenshots</h2>
+    <hr class="section__divider fade-in">
+    <div class="screenshots__gallery fade-in">
+      <div class="screenshot" id="screenshot-1">
+        <img src="img/screenshot_1.png" alt="DOOM 67 — Cacodemon encounter in corridor" loading="lazy">
+        <span class="screenshot__label">Demon Encounter</span>
+      </div>
+      <div class="screenshot" id="screenshot-2">
+        <img src="img/screenshot_2.png" alt="DOOM 67 — Winged demon in dungeon" loading="lazy">
+        <span class="screenshot__label">Winged Terror</span>
+      </div>
+      <div class="screenshot" id="screenshot-3">
+        <img src="img/screenshot_3.png" alt="DOOM 67 — Title screen" loading="lazy">
+        <span class="screenshot__label">Title Screen</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTROLS ========== -->
+  <div class="pentagram-divider">&#10022; &#10022; &#10022;</div>
+  <section class="section" id="controls">
+    <h2 class="section__title fade-in">Controls</h2>
+    <hr class="section__divider fade-in">
+    <div class="controls__grid fade-in">
+      <div class="controls__group" id="controls-keyboard">
+        <h3 class="controls__group-title">Keyboard & Mouse</h3>
+        <ul class="controls__list">
+          <li>
+            <span class="controls__key">Z Q S D</span>
+            <span class="controls__action">Move</span>
+          </li>
+          <li>
+            <span class="controls__key">&#8592; &#8594;</span>
+            <span class="controls__action">Rotate Camera</span>
+          </li>
+          <li>
+            <span class="controls__key">O / P</span>
+            <span class="controls__action">Switch Weapons</span>
+          </li>
+          <li>
+            <span class="controls__key">L.Shift</span>
+            <span class="controls__action">Run</span>
+          </li>
+          <li>
+            <span class="controls__key">L.Click</span>
+            <span class="controls__action">Fire</span>
+          </li>
+        </ul>
+      </div>
+      <div class="controls__group" id="controls-gamepad">
+        <h3 class="controls__group-title">Controller (DS4)</h3>
+        <ul class="controls__list">
+          <li>
+            <span class="controls__key">L.Stick</span>
+            <span class="controls__action">Move</span>
+          </li>
+          <li>
+            <span class="controls__key">R.Stick</span>
+            <span class="controls__action">Camera</span>
+          </li>
+          <li>
+            <span class="controls__key">L1 / R1</span>
+            <span class="controls__action">Switch Weapons</span>
+          </li>
+          <li>
+            <span class="controls__key">R2</span>
+            <span class="controls__action">Fire</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SYSTEM REQUIREMENTS ========== -->
+  <div class="pentagram-divider">&#10022; &#10022; &#10022;</div>
+  <section class="section" id="requirements">
+    <h2 class="section__title fade-in">System Requirements</h2>
+    <hr class="section__divider fade-in">
+    <div class="fade-in">
+      <table class="requirements__table" id="requirements-table">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Minimum</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>OS</td>
+            <td>Linux (any modern distribution)</td>
+          </tr>
+          <tr>
+            <td>Processor</td>
+            <td>Any x86_64 CPU</td>
+          </tr>
+          <tr>
+            <td>RAM</td>
+            <td>256 MB</td>
+          </tr>
+          <tr>
+            <td>Graphics</td>
+            <td>Any GPU with CSFML support</td>
+          </tr>
+          <tr>
+            <td>Storage</td>
+            <td>~5 MB</td>
+          </tr>
+          <tr>
+            <td>Dependencies</td>
+            <td>CSFML (libcsfml-dev)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ========== DOWNLOAD ========== -->
+  <div class="pentagram-divider">&#10022; &#10022; &#10022;</div>
+  <section class="download" id="download">
+    <h2 class="section__title fade-in">Get DOOM 67</h2>
+    <hr class="section__divider fade-in">
+    <div class="download__box fade-in">
+      <p class="download__version">Version 1.0 — Final Release</p>
+      <div class="download__platforms">
+        <a href="https://github.com/Kolbxyz/Wolf3d/releases/latest" class="download__btn" id="download-btn-linux">
+          Linux x86_64
+        </a>
+        <a href="https://github.com/Kolbxyz/Wolf3d" class="download__btn download__btn--secondary" id="download-btn-source">
+          Source Code
+        </a>
+      </div>
+      <p class="download__size">~110 KB binary · Requires CSFML</p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <p class="footer__text">DOOM 67 · MMXXVI</p>
+    <p class="footer__credits">Simon Lallement · Antoine Rayot · Timoth&eacute;e Kremer</p>
+  </footer>
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightbox-close">&#10005;</button>
+    <img src="" alt="Screenshot preview" id="lightbox-img">
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
